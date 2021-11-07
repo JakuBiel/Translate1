@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+    content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .round {
+      position: absolute;
+      height: 50vh;
+      width: 50vh;
+      background: steelblue;
+      border: 5px solid black;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .one {
+      height: 25vh;
+      width: 2px;
+      background: black;
+      border-radius: 2px;
+      position: absolute;
+      top: 0vh;
+      left: 50%;
+      transform: translate(-50%, 0);
+      /* transform: rotate(30deg); */
+      transition: 20s steps(120);
+      transform-origin: 50% 100%;
+    }
+
+
+    .two {
+      height: 25vh;
+      width: 4px;
+      background: white;
+      border-radius: 2px;
+      position: absolute;
+      top: 0vh;
+      left: 50%;
+      transition: steps(1) 10s;
+      transform-origin: 50% 100%;
+      transform: translate(-50%, 0);
+
+    }
+
+    .round:hover .one {
+      transform: translate(-50%, 0) rotate(720deg);
+    }
+
+    .round:hover .two {
+      transform: translate(-50%, 0) rotate(6deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="round">
+
+    <div class="hand two"></div>
+    <div class="hand one"></div>
+  </div>
+</body>
+
+</html>
